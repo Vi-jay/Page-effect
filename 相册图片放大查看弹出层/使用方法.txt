@@ -1,0 +1,29 @@
+相册图片放大查看弹出层jQuery插件——jQuery gallery 我爱模板推荐
+
+jQuery zoom是一款能够查看相册大图的jQuery弹出层插件，点击相册的缩略图，就会弹出该相片对应的大图，并且带有个性的加载动画，还有上一张下一张按钮以及关闭按钮。使用方法非常简单。兼容IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗等浏览器。
+
+使用方法：
+1、在head引入下面的css文件
+<link rel="stylesheet"  href="css/zoom.css" media="all" />
+
+2、您的相册列表必须是ul，并且挂了个class="gallery"的类，li里面的img是缩略图，a链接的href是缩略图对应的大图地址。
+<ul class="gallery">
+	<li><a href="img/gallery/DSC_0008-660x441.jpg"><img src="img/gallery/DSC_0008-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0014-660x441.jpg"><img src="img/gallery/DSC_0014-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0019-660x441.jpg"><img src="img/gallery/DSC_0019-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0061-660x441.jpg"><img src="img/gallery/DSC_0061-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0063-441x660.jpg"><img src="img/gallery/DSC_0063-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0090-660x441.jpg"><img src="img/gallery/DSC_0090-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0091-660x441.jpg"><img src="img/gallery/DSC_0091-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0161-660x441.jpg"><img src="img/gallery/DSC_0161-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0163-660x441.jpg"><img src="img/gallery/DSC_0163-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0187-660x441.jpg"><img src="img/gallery/DSC_0187-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0220-660x441.jpg"><img src="img/gallery/DSC_0220-69x69.jpg" /></a></li>
+	<li><a href="img/gallery/DSC_0222-660x441.jpg"><img src="img/gallery/DSC_0222-69x69.jpg" /></a></li>
+</ul>
+
+3、在相册列表代码后面加入js文件：
+<script src="http://www.5imoban.net/download/jquery/jquery-1.9.0.min.js"></script>
+<script src="js/zoom.min.js"></script>
+
+更多网站素材欢迎访问：http://www.5imoban.net/sucai/

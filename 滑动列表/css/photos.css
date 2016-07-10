@@ -1,0 +1,354 @@
+.photos-content,
+.video-content {
+    margin: 30px 55px 0;
+}
+
+.photos-content h1,
+.video h1 {
+    font-size: 24px;
+    color: #666;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.photos-content p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.subhead {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.photos-box {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.imgbox {
+    width:670px;
+    height:448px;
+    margin-bottom: 40px;
+    position:relative;
+}
+
+.imgbox img {
+    width: 100%;
+    height:100%;
+}
+.imgbox .but {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    cursor: pointer;
+    width: 34px;
+    height: 89px;
+}
+.imgbox .prev {
+    left: 20px;
+    background: url(../img/imgbox-prev.png) no-repeat top left;
+}
+.imgbox .next {
+    right: 20px;
+    background: url(../img/imgbox-next.png) no-repeat top left;
+}
+
+
+.imglist {
+    width: 670px;
+    height:83px;
+    position: relative;
+}
+.imglist .show {
+    position: absolute;
+    height: 83px;
+    left:25px;
+    right:25px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.imglist ul {
+    width:99999px;
+        position: relative;
+}
+
+.imglist li {
+    float: left;
+    width: 110px;
+    height: 72px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    margin: 1px 5px 1px 1px;
+        padding: 4px;
+    z-index:-999;
+}
+.imglist .now{
+    outline:1px solid #cb0000;
+}
+
+.imglist li img {
+    width: 110px;
+    height: 72px;
+}
+
+.prevlist,
+.nextlist {
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 82px;
+    font-size: 20px;
+    line-height: 82px;
+    cursor: pointer;
+    text-align: center;
+    background: #e0e0e0;
+}
+
+.prevlist {
+    left: 0;
+}
+
+.nextlist {
+    right: 0;
+}
+
+
+/*message*/
+
+.message {
+    margin-top: 30px;
+    color: #666;
+}
+
+.message .title {
+    font-size: 18px;
+    height: 30px;
+}
+.message .title span{
+     display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    background: url(../img/icon.png) no-repeat 0 96%;
+}
+
+.message form {
+    margin-top: 20px;
+}
+
+form label {
+    display: inline-block;
+    height: 38px;
+    width: 310px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    line-height: 38px;
+    border-radius: 5px;
+    background: #dbdbdb;
+}
+
+form input[type="text"],
+form textarea {
+    background: transparent;
+}
+
+.m-content {
+    width: 650px;
+    height: 316px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #dbdbdb;
+}
+
+form textarea {
+    width: 672px;
+    height: 296px;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    color: #fff;
+    width: 130px;
+    height: 35px;
+    margin-top: 10px;
+    line-height: 35px;
+    border-radius: 5px;
+    background: #cb0000;
+}
+
+
+/*video*/
+
+.video {
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.video img {
+    width: 100%;
+}
+
+.video-box {
+    padding: 0 10px;
+    width: 790px;
+    height: 569px;
+}
+
+.video-box .place {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.videoplayer {
+    width: 680px;
+    height: 374px;
+    overflow: hidden;
+}
+
+.video-content .page {
+    margin-top: 15px;
+}
+
+.video-content .page a {
+    color: #666;
+}
+
+.video-content .page a:hover {
+    color: #cb0000;
+    text-decoration: underline;
+}
+
+.video .videolist .tag {
+    overflow: hidden;
+    z-index: 999;
+    height: 40px;
+    line-height: 40px;
+}
+
+.video .videolist .tag li.now {
+    background: #9f0707;
+    color: #f1c232;
+}
+
+.video .videolist .tag li {
+    float: left;
+    width: 33.33%;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    color: #fff;
+    background: #cb0000;
+}
+
+.video .videolist .tab {
+    position: relative;
+    height: 589px;
+    overflow: hidden;
+}
+
+.video .videolist .tab a {
+    color: #666;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.video .videolist .tab a:hover {
+    color: #cb0000;
+    background: #f9f1e6;
+}
+
+.video .videolist .tab dd.img {
+    width: 121px;
+    height: 71px;
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video .videolist .tab dl.now .info {
+    display: block;
+}
+
+.video .videolist .tab .info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-indent: 10px;
+    height: 20px;
+    line-height: 20px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.video .videolist .tab dl.now .info span {
+    color: #e67817;
+    display: inline;
+}
+
+.video .videolist .tab dl.now dt {
+    /*color: #cb0000;*/
+}
+
+.video .videolist .tab dt {
+    /*color: #666;*/
+    height: 45px;
+    line-height: 20px;
+}
+
+.video .videolist .tab .text,
+.m-video .videolist .tab dt {
+    width: 130px;
+    float: right;
+}
+
+.u-scrollBox {
+    position: relative;
+}
+
+.u-scrollBar {
+    background: #f9f1e6;
+    width: 10px;
+    height: 589px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.u-scrollBar .scroll {
+    background: #9f0707;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+}
+
+.videolist {
+    width: 290px;
+    height: 589px;
+    background: #feecd6;
+}
+
+.video-message {
+    padding: 10px 65px 10px 65px;
+    margin-bottom: 50px;
+        height: 720px;
+    background: #fff;
+}

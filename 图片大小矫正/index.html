@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>jQuery图片缩放插件jQThumb </title>
+<style>
+* { margin: 0; padding: 0;}
+body { font-family: Consolas,arial,"宋体";}
+h1 { width: 900px; margin: 40px auto; font: 32px "Microsoft Yahei"; text-align: center;}
+.explain, .dowebok-explain { margin-top: 20px; font-size: 14px; text-align: center; color: #f50;}
+.dowebok { width: 920px; margin: 0 auto; list-style-type: none; zoom: 1;}
+.dowebok:after { content: ''; display: table; clear: both;}
+.dowebok li { float: left; width: 200px; height: 200px; margin: 20px 10px 0; display: inline;}
+.dowebok1 { border: 5px solid #d9534f;}
+.dowebok1 img { width: 200px; height: 200px; vertical-align: top;}
+.dowebok2 { border: 5px solid #5cb85c;}
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jqthumb.min.js"></script>
+<script>
+$(function(){
+	$('.dowebok2 img').jqthumb({
+		width: 200,
+		height: 200,
+		after: function(imgObj){
+			imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<h1>jQuery缩略图插件jQThumb演示</h1>
+
+<p class="dowebok-explain">一共有8张尺寸各不同的图片，红色方框里的图片是用样式固定死的，明显有拉伸的现象。而绿色方框里的是使用插件创建的，没有拉伸，效果好很多。</p>
+
+<ul class="dowebok">
+	<li class="dowebok1"><img src="images/9.jpg" alt="美女1"></li>
+	<li class="dowebok1"><img src="images/2.jpg" alt="美女2"></li>
+	<li class="dowebok1"><img src="images/3.jpg" alt="美女3"></li>
+	<li class="dowebok1"><img src="images/4.jpg" alt="美女4"></li>
+	<li class="dowebok2"><img src="images/9.jpg" alt="美女1"></li>
+	<li class="dowebok2"><img src="images/2.jpg" alt="美女2"></li>
+	<li class="dowebok2"><img src="images/3.jpg" alt="美女3"></li>
+	<li class="dowebok2"><img src="images/4.jpg" alt="美女4"></li>
+
+	<li class="dowebok1"><img src="images/5.jpg" alt="美女5"></li>
+	<li class="dowebok1"><img src="images/6.jpg" alt="美女6"></li>
+	<li class="dowebok1"><img src="images/7.jpg" alt="美女7"></li>
+	<li class="dowebok1"><img src="images/8.jpg" alt="美女8"></li>
+	<li class="dowebok2"><img src="images/5.jpg" alt="美女5"></li>
+	<li class="dowebok2"><img src="images/6.jpg" alt="美女6"></li>
+	<li class="dowebok2"><img src="images/7.jpg" alt="美女7"></li>
+	<li class="dowebok2"><img src="images/8.jpg" alt="美女8"></li>
+</ul>
+
+</html>

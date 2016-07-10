@@ -1,0 +1,276 @@
+.box1 {
+    width: 1080px;
+    height: 380px;
+    margin-top: 20px;
+    border: 10px solid #fff;
+}
+
+.box1 .news {
+    margin: 10px;
+    width: 251px;
+    height: 350px;
+    padding: 10px 0 0 10px;
+    background: #fff;
+}
+
+.news .news-title .left {
+    overflow: hidden;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #cb0000;
+}
+
+.more {
+    color: #999;
+    font-size: 14px;
+    position: relative;
+    right: 0;
+    top: 9px;
+}
+
+.more a:hover {
+    color: #bc0000;
+}
+
+.news .person {
+    margin: 15px 0 5px;
+}
+
+.news .person .profile {
+    width: 170px;
+    color: #666;
+}
+
+.news .person .profile .profile-title {
+    color: #cb0000;
+    height: 25px;
+}
+
+.news .person .profile a,.k-info a {
+    color: #cb0000;
+}
+
+.news .news-list li{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.news .news-list li a,
+.make-up-list a{
+    color: #666;
+}
+
+.news .news-list li a:hover
+.box5 .make-up-list a:hover{
+    color: #cb0000;
+    text-decoration: underline;
+}
+
+.box1 .pic {
+    width: 500px;
+    height: 380px;
+}
+
+.pic .picture {
+    position: relative;
+    float: left;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.pic .picture p {
+    position: absolute;
+    top: 190px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    background: rgba(203, 0, 0, .5);
+}
+
+.box1 .admissions {
+    width: 269px;
+    margin:10px;
+    padding: 10px 0 0 10px;
+}
+
+.box1 .admissions-title {
+    padding:0 0 5px 0;
+    border-bottom: 2px solid #cb0000;
+}
+.box1 .admissions-list li,.box1 .admissions .online {
+	padding:0;
+}
+
+.box2,
+.box3,
+.box4,
+.box6,
+.box8{
+    width: 1080px;
+    background: #fff;
+    margin: 20px auto 0;
+    padding: 10px;
+}
+
+.box2 .experts-title,
+.box2 .video-title,
+.box3 .video-title,
+.box4 .works-title,
+.box6 .mien-title{
+    width: 300px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #cb0000;
+}
+
+.box2 .experts-list {
+    width: 680px;
+    height: 250px;
+    background: #feecd6;
+}
+
+.box2 .video-model {
+    width: 379px;
+    height: 252px;
+}
+
+.box3 .video-list {
+    width: 680px;
+}
+
+.box3 .video-list .view {
+    float: left;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    font-size: 12px;
+    position: relative;
+}
+
+.box3 .view-2-img {
+    width: 219px;
+    height: 125px;
+    overflow: hidden;
+}
+
+.box3 .view-2-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.box3 .view .mask {
+    width: 219px;
+    height: 125px;
+    color: #fff;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.box3 .view .mask:hover {
+    background: rgba(188, 0, 0, .5);
+}
+
+.box3 .view .iconplay {
+    font-size: 35px;
+    width: 35px;
+    display: block;
+    margin: 0 auto;
+    line-height: 125px;
+    opacity: 0;
+}
+
+.news-video-model-font {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+.news-video-model:hover .news-video-model-font {
+    color: #bc0000;
+}
+
+.box4 .works-list li{
+    float:left;
+    margin-right:13px;
+}
+
+.box5{
+	width: 1100px;
+	height:397px;
+    margin: 20px auto 0;
+}
+.make-up{
+	width:339px;
+	margin-right:10px;
+    background: #fff;
+    padding: 10px;
+}
+.make-up-title{
+	width: 268px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #cb0000;
+}
+.knowledge{
+    margin-top:20px;
+    padding-bottom:16px;
+    color:#666;
+    overflow: hidden;
+    border-bottom:2px dotted #999;
+}
+.knowledge .k-pic{
+	width:142px;
+	height:92px;
+	overflow:hidden;
+}
+.knowledge .k-info,
+.knowledge .k-info{
+	width:168px;
+	height:94px;
+	overflow:hidden;
+	margin-right: 10px;
+	text-align: justify;
+}
+.knowledge .k-info-title{
+    color: #bc0000;
+    height:30px;
+}
+.make-up-list{
+	list-style: disc;
+	padding-left: 15px;
+    color:#666;
+        margin: 20px 0;
+}
+.make-up-list li{
+	line-height: 23px;
+}
+
+.box6 .mien-list li{
+	float:left;
+	width:208px;
+	margin-right:10px;
+	position:relative;
+}
+.box6 .mien-list li img{
+	width:100%;
+}
+
+
+.box7{
+	margin-top:20px;
+}
+.box8{
+	margin-bottom:20px;
+}
+.box8 .partners-name{
+	height:60px;
+	padding:31px 64px;
+	background:#feecd6;
+}
+.box8 .partners-name li{
+	float:left;
+	margin-right:18px;
+}

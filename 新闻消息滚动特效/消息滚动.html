@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>消息滚动</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jesse">
+    <style type="text/css">
+		#divMsg{
+			line-height:20px;
+			height:20px;
+			overflow:hidden;
+		}
+		p{
+			margin:0;
+			padding:0;
+		}
+    </style>
+</head>
+
+<body>
+	<div id="divMsg">
+		<p>今天获得1枚金牌</p>
+		<p>今天获得2枚金牌</p>
+		<p>今天获得3枚金牌</p>
+		<p>今天获得4枚金牌</p>
+		<p>今天获得5枚金牌</p>
+		<p>今天获得6枚金牌</p>
+	</div>
+	<input type="button" value="start" id="start" onclick="Scroll.start()" >
+	<input type="button" value="stop" id="stop" onclick="Scroll.stop()" >
+	<script type="text/javascript">
+		var Scroll = new function(){
+			this.delay = 1000;//延迟的时间
+			this.step = 4;//每一次移动的距离px
+			this.height = 20;//行高px
+			this.curHeight = 0;
+			this.timer = null;
+			this.startBtn = document.getElementById('start');
+			this.start = function(){
+				if(this.startBtn.disabled == false){
+					this.move();
+					this.startBtn.disabled = true;
+				}
+			};
+			this.move = function(){
+				var self = this;
+				if(this.curHeight == this.height){//如果显示完一行
+					this.timer = setTimeout(function(){//使用定时器定时下一行的翻页时间
+						self.move();
+					},this.delay);
+					this.curHeight = 0;
+					if(this.element.scrollTop >= this.element.scrollHeight - this.height){
+						this.element.scrollTop = 0;//滚动信息已经完毕
+					}
+					return true;
+				}
+				this.element.scrollTop += this.step;
+				this.curHeight += this.step;
+				this.timer = setTimeout(function(){ //设置自动翻页定时器
+					self.move();
+				},30);
+			};
+			this.stop = function(){
+				clearTimeout(this.timer);
+				this.startBtn.disabled = false;
+			};
+		};
+		Scroll.element = document.getElementById('divMsg');
+		Scroll.start();
+	</script>
+</body>
+
+</html>

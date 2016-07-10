@@ -1,0 +1,12 @@
+.photo-list{
+	margin:30px;
+	overflow:hidden;
+}
+.photo-list img{
+	width:100%;
+}
+.photo-list li{
+	float:left;
+	width:219px;
+        margin: 0 30px 15px 0;
+}

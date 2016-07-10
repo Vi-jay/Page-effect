@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>css3 手风琴特效</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jesse">
+    <style>
+    img{border:none;}
+    .m-demo { width: 600px; height: 250px; overflow: hidden; list-style: none;padding:0; margin:0;}
+    .m-demo li { float: left; width: 120px; height: 100%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); -webkit-transition: width 0.5s ease-out; -moz-transition: width 0.5s ease-out; -ms-transition: width 0.5s ease-out; transition: width 0.5s ease-out; }
+    .m-demo:hover li:not(:hover) { width: 50px; }
+    .m-demo li:hover { width: 400px; }
+    </style>
+</head>
+
+<body>
+    <ul class="m-demo">
+        <li>
+            <a href="#"><img src="img/1.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/2.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/3.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/4.jpg" alt="" /></a>
+        </li>
+        <li>
+            <a href="#"><img src="img/5.jpg" alt="" /></a>
+        </li>
+    </ul>
+    <p>适用于IE9+</p>
+</body>
+
+</html>

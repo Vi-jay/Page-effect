@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>lazyload</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Jesse">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+        .page{width:1100px;margin:0 auto;}
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/0.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/1.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/2.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/3.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/4.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/5.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/6.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/7.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/8.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/9.jpg" width="990px" height="450px"></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/loading.gif" data-original="images/10.jpg" width="990px" height="450px"></a>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="jquery.lazyload.min.js"></script>
+    <script>
+    //详细：http://www.w3cways.com/1765.html
+    //这里必须设置图片的width和height,否则插件可能无法正常工作
+    jQuery(document).ready(
+        function($) {
+            $("img").lazyload({
+                placeholder: "img/loading.gif", //加载图片前的占位图片
+                effect: "fadeIn", //加载图片使用的效果(淡入）你可以使用任何你想要的jquery效果
+                failurelimit: 10,//令插件找到 10 个不在可见区域的图片时才停止搜索.
+                threshold: 50 //图片在距离屏幕50像素时提前加载.
+            });
+        }
+    );
+    </script>
+</body>
+
+</html>

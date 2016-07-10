@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JS鼠标移上后图片放大特效</title>
+    <style>
+    #zoom1 {
+        background-color: red;
+        width: 750px;
+        height: 200px;
+        margin: 5px auto;
+        padding: 10px;
+    }
+    
+    #pic1,
+    #pic2,
+    #pic3 {
+        float: left;
+        width: 240px;
+        height: 190px;
+        margin: 5px;
+    }
+    
+    #zoom1 img {
+        background: #FFF;
+        width: 220px;
+        height: 170px;    
+        /* 当设置图片高宽时，IE8下 图片在动画的过程中有可能会恢复本身大小*/
+        margin: 11px;
+        padding: 5px;
+        border-style:none;
+        /*transition: all 0.2s;*/
+    }
+/*    
+    #zoom1 img:hover {
+        transform: scale(1.1);
+    }*/
+    </style>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("img").hover(
+            function(){
+                $(this).stop().animate({
+                    marginLeft:"0",
+                    marginTop:"2.5px",
+                    width:"242px",
+                    height:"187px"
+                },"fast")
+            },
+            function(){
+                $(this).stop().animate({
+                    margin:"10px",
+                    width:"220px",
+                    height:"170px"
+                },"fast")
+            }
+        )
+    })
+    </script>
+</head>
+
+<body>
+    <div id="zoom1">
+        <div id="pic1">
+            <a href="#"><img src="images/1_s.jpg" /></a>
+        </div>
+        <div id="pic2">
+            <a href="#"><img src="images/2_s.jpg" /></a>
+        </div>
+        <div id="pic3">
+            <a href="#"><img src="images/3_s.jpg" /></a>
+        </div>
+    </div>
+</body>
+
+</html>
