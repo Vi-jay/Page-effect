@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>下拉逐渐加载</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+    <style type="text/css">
+    body{margin:0;}
+    .container {width: 100%; }
+    .num { width: 90%; margin: 0 auto; height: 500px; font-size: 50px; }
+    .num1 { background: red; }
+    .num2 { background: orange; }
+    .num3 { background: yellow; }
+    .num4 { background: green; }
+    /*#loading { display: none; }*/
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="num num1">1</div>
+        <div class="num num2">2</div>
+    </div>
+    <script type="text/javascript">
+    console.log($(document).height());  //文档的高度
+    var range = 50;                //距下边界长度/单位px
+    console.log($(window).height());  //视口高度
+    console.log($(window).scrollTop());  //向上卷起的高度
+    $(document).scroll(function() {
+        if ($(document).height() - range <= $(window).height() + $(window).scrollTop()) {
+            $.ajax({
+                url: "next.html",
+                type: "GET",
+                dataType: "html",
+                success: function(data) {
+                    $('.container').append(data);
+                }
+            });
+        }
+    });
+    var $loading = $('<div id="loading"><img src="loading.gif"/></div>');
+    $(document).ajaxStart(function() {
+        $loading.appendTo('.container');
+        $loading.show();
+    }).ajaxStop(function() {
+        $loading.hide();
+    });
+    </script>
+</body>
+
+</html>
