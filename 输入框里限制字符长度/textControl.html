@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>textControl</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jesse">
+</head>
+
+<body>
+    <textarea class="txt" oninput="textControl(this.value)" onpropertychange="textControl(this.value)"></textarea>
+    <!-- oninput 是 HTML5 的标准事件，对于检测 textarea, input:text, input:password 和 input:search 这几个元素通过用户界面发生的内容变化非常有用，在内容修改后立即被触发，不像onchange事件需要失去焦点才触发.oninput 事件在 IE9 以下版本不支持，需要使用 IE 特有的 onpropertychange 事件替代-->
+    <script>
+    	function textControl(content){
+    		var n   = 10,//允许的字符长度
+    		element = document.querySelector('.txt');
+    		if(content.length > n){
+    			element.value = element.value.substring(0,n);
+    		}
+    	}
+    </script>
+</body>
+
+</html>

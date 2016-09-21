@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+    <style type="text/css">
+    body{margin:0;}
+    .container { width: 100%; }
+    .wrapper{ height:500px; }
+    .num { width: 90%; margin: 0 auto; height: 500px; font-size: 50px; }
+    .num1 { background: red; }
+    .num2 { background: orange; }
+    .num3 { background: yellow; }
+    .num4 { background: green; }
+    #loading { display: none; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="num num1">1</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num2">2</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num3">3</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num4">4</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num1">1</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num2">2</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num3">3</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num4">4</div>
+        </div><div class="wrapper">
+            <div class="num num1">1</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num2">2</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num3">3</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num4">4</div>
+        </div><div class="wrapper">
+            <div class="num num1">1</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num2">2</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num3">3</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num4">4</div>
+        </div><div class="wrapper">
+            <div class="num num1">1</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num2">2</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num3">3</div>
+        </div>
+        <div class="wrapper">
+            <div class="num num4">4</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var $winH = $(window).height(); //浏览器可视区域的高度
+    var $div = $(".num");
+    var $wrapper = $('.wrapper');
+    var $divH = parseInt($div.height() / 4);
+    $div.hide();
+    runing();
+    $(window).scroll(function() {
+        runing();
+    });
+
+    function runing() {
+        $div.each(function(i) {
+            var $scroTop = $wrapper.eq(i).offset();
+            if ($(window).scrollTop() + $winH >= $scroTop.top + $divH) {
+                //仅仅是为了隐藏，使得在调用fadeIn时有效果
+                $div.eq(i).fadeIn(500);
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>

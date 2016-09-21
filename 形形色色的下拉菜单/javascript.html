@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>demo</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jesse">
+    <style type="text/css">
+    ul { margin: 0px; padding: 0px; }
+    #menu { background-color: #eee; width: 600px; height: 40px; margin: 0 auto; }
+    ul { list-style: none; }
+    ul li { line-height: 40px; text-align: center; position: relative;float:left; }
+    a { text-decoration: none; color: #000; display: block; width: 90px; }
+    a:hover { color: #FFF; background-color: #666; }
+    ul li ul { width: 90px; position: absolute; top:40px;left:0;display:none;height:0;overflow:hidden;}
+    ul li ul li { float: none; margin-top: 2px; background-color: #eee; }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li id="course"><a href="#">课程大厅</a>
+            	<ul>
+            		<li><a href="#">javascript</a></li>
+            		<li><a href="#">jquery</a></li>
+            	</ul>
+            </li>
+            <li id="study"><a href="#">学习中心</a>
+                <ul>
+                    <li><a href="#">视频学习</a></li>
+                    <li><a href="#">案例学习</a></li>
+                    <li><a href="#">交流平台</a></li>
+                </ul>
+            </li>
+            <li><a href="#">经典案例</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    	var course = document.getElementById('course'),
+    		study = document.getElementById('study'); 
+        //DOM2
+    	function show(){
+    		var ul = this.getElementsByTagName('ul')[0];
+            ul.style.display = "block";
+            toggle(ul,1);
+    	}
+    	function hide(){
+    		var ul = this.getElementsByTagName('ul')[0];
+            toggle(ul,-1);
+    	}
+
+        function toggle(element,count){
+            var h = element.offsetHeight;
+            if(count > 0){
+                var timer = setInterval(function(){
+                    h += count;
+                    element.style.height = h +"px";
+                    if(h > 84){
+                        clearTimeout(timer);
+                    }
+                },10);
+            }else{
+                var timer = setInterval(function(){
+                    h += count;
+                    element.style.height = h +"px";
+                    if(h == 0){
+                        clearTimeout(timer);
+                    }
+                },10);
+            }
+        }
+
+        var EventUtil = {
+            addHandler:function(element,type,handler){
+                if(element.addEventListener){
+                    element.addEventListener(type,handler,false);
+                }else if(element.attachEvent){
+                    element.attachEvent("on"+ type,handler);
+                }else{
+                    element["on"+ type] = handler;
+                }
+            },
+            removeHandler:function(element,type,handler){
+                if(element.removeEventListener){
+                    element.removeEventListener(type,handler,false);
+                }else if(element.detachEvent){
+                    element.detachEvent("on"+ type,handler);
+                }else{
+                    element["on"+ type] = null;
+                }
+            }
+        } 
+        EventUtil.addHandler(course,"mouseover",show);
+        EventUtil.addHandler(study,"mouseover",show);
+        EventUtil.addHandler(course,"mouseout",hide);
+        EventUtil.addHandler(study,"mouseout",hide);
+
+
+    </script>
+</html>
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style type="text/css">
+    div,
+    ul,
+    li,
+    img {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .scroll_div {
+        width: 1200px;
+        height: 370px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .scroll_div .pic {
+        width: 920px;
+        height: 290px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+    }
+    
+    .scroll_div .pic li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    /*    .scroll_div .pic li img{
+    	vertical-align:bottom;
+    }*/
+    
+    .scroll_div .btn {
+        float: left;
+        width: 173px;
+        margin-left: 20px;
+        height: 290px;
+    }
+    
+    .scroll_div .btn li {
+        width: 173px;
+        height: 66px;
+        display: block;
+        float: left;
+        text-align: center;
+        color: #fff;
+        font: bold 18px/66px "微软雅黑";
+        background: #008dd8;
+        margin: 15px 0;
+        cursor: pointer;
+    }
+    
+    .scroll_div .btn li.on {
+        background: #d73737;
+    }
+    
+    li {
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="scroll_div">
+        <ul class="pic">
+            <li><img src="img/1.jpg" /></li>
+            <li><img src="img/2.jpg" /></li>
+            <li><img src="img/3.jpg" /></li>
+        </ul>
+        <ul class="btn">
+            <li>项目一</li>
+            <li>项目二</li>
+            <li>项目三</li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var listLen = $(".pic li").length,
+            i = 0,
+            setInter, 
+            speed = 2000;
+        /*图片轮播*/
+        $(".btn li:first").addClass("on");
+        $(".pic li:first").show();
+        $(".btn li").each(function(index, element) {  //用index和element标记所遍历的那个元素
+            $(element).click(function() {
+                i = index;
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".pic li").eq(index).animate({     //通过index来监听所点击的那个标签
+                    opacity: "show"
+                }, 300).siblings().animate({
+                    opacity: "hide"
+                }, 300);
+            })
+            $(element).hover(
+                function() {
+                    clearInterval(setInter);
+                },
+                function() {
+                    autoPlay();
+                });
+        })
+
+        out_fun = function() {
+            if (i < listLen) {
+                    i++;
+                } else {
+                    i = 0;
+            };
+            $(".btn li").eq(i).addClass("on").siblings().removeClass("on");
+            $(".pic li").eq(i).animate({
+                opacity: "show"
+            }, 300).siblings().animate({
+                opacity: "hide"
+            }, 300);
+        }
+
+        autoPlay = function() {
+            setInter = setInterval("out_fun()", speed);
+        }
+        autoPlay();
+    })
+    </script>
+</body>
+
+</html>

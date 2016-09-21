@@ -1,0 +1,172 @@
+.course-main{
+	margin:30px;
+}
+.h-info{
+	margin:0 0 20px 30px;
+	width:441px;
+}
+.h-info h1{
+	font-size: 24px;
+	font-weight:normal;
+}
+.h-info .news{
+	color:#bc0000;
+	margin:10px 0;
+}
+.h-info p{
+	margin:8px 0;
+}
+.h-info .online {
+	padding:0;
+}
+.h-info .online p{
+	margin: 5px 30px 5px 0;
+}
+.line img{
+	width:720px;
+}
+.c-info{
+	margin-top:48px;
+}
+.c-info-title{
+	height:30px;
+	color:#fff;
+	background:#e27070;
+}
+.c-info-title li{
+	float:left;
+	font-size:16px;
+	width:95px;
+	text-align: center;
+	line-height: 30px;
+}
+.c-info-title .active{
+	background:#cb0000;
+}
+
+/*introduce*/
+.introduce{
+	list-style: disc;
+	margin:30px 0 0 20px;
+	color:#bc0000;
+}
+.introduce li{
+	margin-top:35px;
+}
+.introduce .title{
+	height: 35px;
+    margin-left: -20px;
+    padding-left: 15px;
+	background:url(../img/icon.png) repeat-x scroll 50% 50%;
+}
+.introduce .introduce-content{
+	margin: 5px 0 0 -15px;
+	text-align: justify;
+	line-height:20px;
+	color:#666;
+}
+/*evaluate*/
+.evaluate{
+	display:none;
+	margin-top:30px;
+}
+.evaluate ul{
+	height:620px;
+	overflow:hidden;
+}
+.evaluate li{
+    margin-top:15px;
+}
+.evaluate .e-username{
+	height:30px;
+	background:url(../img/icon.png) repeat-x scroll 50% 50%;
+}
+.evaluate .name{
+	color:#cb0000;
+}
+.evaluate .date{
+	margin-right:10px;
+}
+.evaluate .e-content{
+	margin-top:10px;
+	height:34px;
+	overflow:hidden;
+}
+.evaluate form{
+	position:absolute;
+	bottom:110px;
+	width:720px;
+}
+.evaluate form textarea{
+	width:714px;
+	height:148px;
+	border:1px solid #e0e0e0;
+}
+.evaluate form input{
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    background: #cb0000;
+}
+
+/*consult*/
+.consult{
+	display:none;
+}
+.consult form{
+	margin-top:40px;
+	padding:60px 30px;
+	width:660px;
+	height:209px;
+	border-radius: 15px;
+	background:#e7e7e7;
+}
+.consult .red{
+	font-size:20px;
+    position:relative;
+    top:7px;
+	color:red;
+}
+.consult label{
+	display:block;
+	height:35px;
+	margin-bottom:20px;
+	padding-left:10px;
+	border-radius: 10px;
+	background:#dcdcdc;
+}
+.consult input[type="text"]{
+	background:transparent;
+}
+
+.consult .right{
+	width:357px;
+}
+.consult .right p{
+	vertical-align: top;
+}
+.consult .right p .red{
+	top:0;
+}
+.consult textarea{
+	width:338px;
+	height:120px;
+	padding:10px;
+	border-radius: 15px;
+	background:#dcdcdc;
+}
+.consult input[type="submit"]{
+    border-radius: 5px;
+    float: right;
+    background: #cb0000;
+    margin-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    width: 92px;
+}
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="Jesse">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style type="text/css">
+        .news .title{
+            font-size: 14px;
+            margin: 10px 0;
+            overflow:hidden;
+        }
+        .news .title .scroll{
+            display: inline-block;
+            height:45px;
+            vertical-align: top;
+        }
+        .news .title .scroll p{
+            height:31px;
+            line-height: 31px;
+        }
+        .news .title a,.news .title a:hover{
+            color:#68b4ea;
+            vertical-align: middle;
+        }
+        .news .title .time{
+            color:#a5a5a5;
+            margin:0 30px 0 20px;
+            vertical-align: middle;
+        }
+        .news .title .more{
+            display:inline-block;
+            vertical-align: top;
+            padding:5px 10px;
+            border-radius:25px;
+            background-color:#dfe0e4;
+        }
+    </style>
+</head>
+
+<body>
+<section class="news">
+    <div class="title">
+        <span class="icon"></span>
+        <div class="scroll">
+                <p>
+                    <a href="#">ESPEER微晶美容打造“互联网+”全新商业模式1</a>
+                    <span class="time">2015-12-16</span>
+                </p>
+                <p>
+                    <a href="#">ESPEER微晶美容打造“互联网+”全新商业模式2</a>
+                    <span class="time">2015-12-16</span>
+                </p>
+                <p>
+                    <a href="#">ESPEER微晶美容打造“互联网+”全新商业模式3</a>
+                    <span class="time">2015-12-16</span>
+                </p>
+                <p>
+                    <a href="#">ESPEER微晶美容打造“互联网+”全新商业模式4</a>
+                    <span class="time">2015-12-16</span>
+                </p>
+                <p>
+                    <a href="#">ESPEER微晶美容打造“互联网+”全新商业模式5</a>
+                    <span class="time">2015-12-16</span>
+                </p>
+        </div>
+        <span class="more"><a href="#">更多新闻</a></span>
+    </div>
+</section>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    //新闻滚动特效
+    function autoScroll(obj){
+        var $scroll = $(obj).find('.scroll');
+        $scroll.animate({
+            marginTop:-$scroll.height()
+        },1000,function(){
+            //把最上面的一个p元素移动到最后
+            $(this).css({marginTop:"0"}).find("p:first").appendTo(this);
+        });
+    }
+    setInterval('autoScroll(".news .title")',3000);
+    </script>
+</body>
+
+</html>

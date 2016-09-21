@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>jQuery手风琴插件</title>
+	<style type="text/css">
+		body,ul { padding: 0; margin: 0; }
+		ul li{ list-style: none; float: left; }
+		.accordion{ width: 1180px; overflow: hidden; height: 375px; margin:0 auto; }
+		.accordion ul li{ background-repeat: no-repeat; float: left; width: 140px; height: 350px; cursor: default; }
+		.accordion ul li.active{ width: 620px; }
+		.accordion ul .item1{ background-image: url(img/pic1.jpg); }
+		.accordion ul .item2{ background-image: url(img/pic2.jpg); }
+		.accordion ul .item3{ background-image: url(img/pic3.jpg); }
+		.accordion ul .item4{ background-image: url(img/pic4.jpg); }
+		.accordion ul .item5{ background-image: url(img/pic5.jpg); }
+		.accordion ul li a{ display: block; width: 140px; height: 350px; cursor: default; }
+		.accordion ul .item1 a{ background-image: url(img/pics1.jpg); }
+		.accordion ul .item2 a{ background-image: url(img/pics2.jpg); }
+		.accordion ul .item3 a{ background-image: url(img/pics3.jpg); }
+		.accordion ul .item4 a{ background-image: url(img/pics4.jpg); }
+		.accordion ul .item5 a{ background-image: url(img/pics5.jpg); }
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<ul>
+			<li class="item1 active"><a href=""></a></li>
+			<li class="item2"><a href=""></a></li>
+			<li class="item3"><a href=""></a></li>
+			<li class="item4"><a href=""></a></li>
+			<li class="item5"><a href=""></a></li>
+		</ul>
+	</div>
+	<p>适用于IE8</p>
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.accordion.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $(".accordion").accordion();
+	  });
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+    <title>jQuery鼠标滑过下划线跟随导航栏</title>
+    <style type="text/css">
+    *{margin:0;padding:0;}
+    #bg{background-color: rgb(102, 132, 228);padding:20px;}
+    /* container */
+    #container{width:945px;height:34px;position:relative;overflow:hidden;margin:auto;}
+    #container li{display:block;float:left;width:133px;height:32px;line-height:32px;padding-right:2px;line-height:32px;list-style:none;}
+    #container li a{color:#fff;text-decoration:none;display:block;position:relative;width:123px;height:32px;padding-right:10px;font-size:14px;font-weight:bold;text-align:right;}
+    #container li a:hover,#container li a.cur{background:#222;}
+    #container li a span{display:block;position:absolute;left:10px;top:0;font-weight:normal;font-size:10px;-webkit-text-size-adjust:none;opacity:0.6;filter:alpha(opacity=60);}
+    #underline{position:absolute;width:133px;height:2px;background:#e9d008;bottom:0px;left:-157px;}
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <div id="container">
+            <ul>
+                <li><a class="cur" href="#"><span>BRAND</span></a></li>
+                <li><a href="#"><span>OVERVIEW</span></a></li>
+                <li><a href="#"><span>WORTH</span></a></li>
+                <li><a href="#"><span>SUPPORT</span></a></li>
+                <li><a href="#"><span>UNIT</span></a></li>
+                <li><a href="#"><span>DATOU</span></a></li>
+                <li><a href="#"><span>NEWS</span></a></li>
+            </ul>
+            <div id="underline"></div>
+        </div>
+    </div>
+        <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            /**
+             * [underlineFollow description]
+             * @param  {[object]} wrap      [外包裹元素]
+             * @param  {[object]} underline [下划线元素]
+             * @param  {[unmber]} time      [滑动所需时间]
+             */
+            function underlineFollow(wrap,underline,time){
+                time = typeof time === 'number' ? time : 500;
+                var $list = wrap.find('ul>li'),
+                    position = underline.css('left');
+                $list.hover(function () {
+                    underline.stop().animate({
+                        left: $(this).offsetParent().context.offsetLeft
+                        // width:$(this).offsetParent().context.width
+                    }, time);
+                }, function () {
+                    underline.stop().animate({
+                        left: position
+                    }, time);
+                })
+            }
+            underlineFollow($('#container'),$("#underline"),500);
+        </script>
+</body>
+
+</html>

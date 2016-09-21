@@ -1,0 +1,26 @@
+.m-list{
+	margin:15px 30px 0;
+}
+.m-list li{
+	padding:25px 0;
+	overflow:hidden;
+	border-bottom:1px dotted #e0e0e0;
+}
+.m-lidt .left img{
+	width:168px;
+}
+.m-list .right{
+	width:530px;
+}
+.m-list .time{
+	color:#999; 
+	    margin: 5px 0 10px;
+}
+.m-list .title a{
+   font-size:14px;
+	   color:#666;
+}
+.m-list .title a:hover{
+	color:#cb0000;
+	text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+.m-course-list{
+	margin:30px;
+}
+.m-course-list li{
+	float:left;
+	width:196px;
+	padding:10px;
+	margin:0 33px 30px 0;
+	border:1px solid #ccc;
+	border-radius:10px;
+}
+.m-course-list li img{
+	width:100%;
+}
+.m-course-list li p{
+	width:196px;
+	color:#666;
+}
+.m-course-list li .look{
+	color:#fff;
+	width:80px;
+	height:20px;
+	line-height:20px;
+	margin:25px auto 15px;
+	text-align: center;
+	border-radius:10px;
+	background:#cb0000;
+}
